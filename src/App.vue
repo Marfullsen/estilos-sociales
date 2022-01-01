@@ -1,12 +1,33 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <article class="w-50 evenly">
+      <router-link to="/">
+        <i class="medio material-icons">home</i>
+      </router-link>
+      <router-link to="/about">
+        <i class="medio material-icons">help_outline</i>
+      </router-link>
+    </article>
   </div>
   <router-view />
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  background-color: #34a8ff;
+  background: repeating-linear-gradient(
+    45deg,
+    rgb(0, 238, 255),
+    rgb(0, 195, 255) 100px,
+    rgb(0, 176, 230) 100px,
+    rgb(6, 177, 245) calc(2 * 100px)
+  );
+  height: 100vh;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,8 +36,24 @@
   color: #2c3e50;
 }
 
+.medio {
+  font-size: 3rem;
+}
+
+.w-50 {
+  width: 15em;
+}
+
+.evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #nav {
-  padding: 30px;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #nav a {
@@ -25,6 +62,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: white;
 }
 </style>
