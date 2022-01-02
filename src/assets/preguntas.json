@@ -1,0 +1,92 @@
+{
+  "1": {
+    "title": "Al formular una opinión",
+    "a": "Mantengo el cuerpo inclinado hacia atrás.",
+    "b": "Mantengo el cuerpo erguido o inclinado hacia delante al expresarme."
+  },
+  "2": {
+    "title": "Al hablar",
+    "a": "No uso demasiado las manos cuando hablo.",
+    "b": "Suelo usar las manos cuando hablo."
+  },
+  "3": {
+    "title": "Muestro una energía",
+    "a": "Mesurada, dosificada.",
+    "b": "Explícita, desbordante."
+  },
+  "4": {
+    "title": "Mi lenguaje Corporal",
+    "a": "Es controlado.",
+    "b": "Es libre y elocuente."
+  },
+  "5": {
+    "title": "Uso gestos fuertes",
+    "a": "Es poco frecuente que utilice gestos fuertes, terminantes",
+    "b": "Con frecuencia utilizo gestos fuertes, terminantes."
+  },
+  "6": {
+    "title": "Las expresiones de mi cara",
+    "a": "No siempre expresan lo que siento.",
+    "b": "Me “delatan”."
+  },
+  "7": {
+    "title": "Suelo hablar",
+    "a": "En voz baja.",
+    "b": "en voz alta."
+  },
+  "8": {
+    "title": "Aparento",
+    "a": "Seriedad, circunspección.",
+    "b": "Una habitual disposición a divertirme y pasarla bien."
+  },
+  "9": {
+    "title": "Tiendo a",
+    "a": "Preguntar con mayor frecuencia que a enunciar.",
+    "b": "Enunciar con mayor frecuencia que a preguntar."
+  },
+  "10": {
+    "title": "– Utilizo",
+    "a": "Un rango reducido de inflexiones de voz.",
+    "b": "Muchas y muy diversas inflexiones de voz."
+  },
+  "11": {
+    "title": "En situaciones donde no actúan",
+    "a": "No me surge la tendencia a presionar a otros para que actúen.",
+    "b": "Me surge la tendencia a presionar a otros para que actúen."
+  },
+  "12": {
+    "title": "Con mis sentimientos o emociones",
+    "a": "No tiendo a mostrar sentimientos espontáneamente.",
+    "b": "Tiendo a mostrar sentimientos espontáneamente."
+  },
+  "13": {
+    "title": "Expreso opiniones",
+    "a": "De forma tentativa, reflexiva.",
+    "b": "De forma taxativa, contundente."
+  },
+  "14": {
+    "title": "Mis conversaciones son",
+    "a": "Principalmente orientadas a la tarea.",
+    "b": "Son orientadas a la gente."
+  },
+  "15": {
+    "title": "Tiendo a resolver",
+    "a": "Situaciones pausadamente.",
+    "b": "Situaciones rápidamente."
+  },
+  "16": {
+    "title": "Me oriento",
+    "a": "Más a los hechos y a la lógica.",
+    "b": "Más a los sentimientos y a las opiniones."
+  },
+  "17": {
+    "title": "Mi ritmo natural es",
+    "a": "Calmo, “paso a paso”.",
+    "b": "Acelerado, quizás ansioso."
+  },
+  "18": {
+    "title": "Con mis anécdotas",
+    "a": "Es raro que cuente anécdotas o intervenga en charlas casuales.",
+    "b": "Suelo contar anécdotas e intervenir en charlas casuales."
+  }
+}

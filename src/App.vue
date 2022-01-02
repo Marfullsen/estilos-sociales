@@ -7,9 +7,12 @@
       <router-link to="/about">
         <i class="medio material-icons">help_outline</i>
       </router-link>
+      <router-link to="/settings">
+        <i class="medio material-icons">settings</i>
+      </router-link>
     </article>
   </div>
-  <router-view />
+  <router-view class="whiteFrame"/>
 </template>
 
 <style>
@@ -26,6 +29,15 @@ body {
     rgb(6, 177, 245) calc(2 * 100px)
   );
   height: 100vh;
+}
+
+.whiteFrame {
+  font-family: "Architects Daughter";
+  background: white;
+  border: solid 5px skyblue;
+  border-radius: 10px;
+  margin: 5em;
+  margin-top: 0;
 }
 
 #app {
