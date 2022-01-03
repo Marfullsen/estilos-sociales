@@ -5,24 +5,17 @@
         <section v-if="!resultsScreen">
           <h1 class="mb-0">¡Conoce tu Estilo Social!</h1>
           <p class="message mt-1 fsize-large">
-            Integrador - Propulsor - Analítico - Expresivo
+            <span title="Integrador"> Afable </span> -
+            <span title="Propulsor"> Emprendedor </span> - Analítico - Expresivo
           </p>
           <i class="large material-icons">fingerprint</i>
         </section>
         <section v-else>
           <h1 class="mb-0">¡Eres {{ playerStyle }}!</h1>
-          <div class="flex justify-center align-center">
-            <div class="relative">
-              <img
-                class="block"
-                src="../assets/cartesianSocialStyle.png"
-                alt="mapa_cartesiano"
-              />
-              <i class="large material-icons right absolute fontRed"
-                >location_on</i
-              >
-            </div>
-          </div>
+          <mapa-cartesiano
+            :assertividad="-asertividad"
+            :emotividad="-emotividad"
+          />
           <p class="message mt-1 fsize-large">
             Nivel de asertividad: {{ -playerAnswers.a + playerAnswers.b }}
           </p>
@@ -96,6 +89,7 @@
 
 <script>
 import preguntas from "@/assets/preguntas.json";
+import MapaCartesiano from "../components/MapaCartesiano.vue";
 
 export default {
   name: "WelcomePage",
@@ -106,9 +100,10 @@ export default {
       amountQuestions,
     };
   },
-  components: {},
+  components: { MapaCartesiano },
   data() {
     return {
+      canvas: null,
       welcomeScreen: true,
       resultsScreen: false,
       id_question: "1",
@@ -125,6 +120,8 @@ export default {
         d: 0,
       },
       playerStyle: "todo",
+      asertividad: 0,
+      emotividad: 0,
     };
   },
   methods: {
@@ -169,15 +166,17 @@ export default {
       this.welcomeScreen = true;
       this.id_question = "1";
       this.resultsScreen = true;
-      const asertividad = this.playerAnswers.b - this.playerAnswers.a;
-      const emotividad = this.playerAnswers.d - this.playerAnswers.c;
-      asertividad > 0
-        ? emotividad > 0
+      this.asertividad = this.playerAnswers.b - this.playerAnswers.a;
+      this.emotividad = this.playerAnswers.d - this.playerAnswers.c;
+      this.asertividad > 0
+        ? this.emotividad > 0
           ? (this.playerStyle = "expresivo")
           : (this.playerStyle = "propulsor")
-        : emotividad > 0
+        : this.emotividad > 0
         ? (this.playerStyle = "integrador")
         : (this.playerStyle = "analítico");
+      //const canvas = document.getElementById("mapa");
+      //const ctx = this.$refs.mapa.getContext("2d");
       /* alert("a" + this.playerAnswers.a);
       alert("b" + this.playerAnswers.b);
       alert("asert" + asertividad);
@@ -186,6 +185,16 @@ export default {
       alert("emotiv" + emotividad); */
     },
   },
+  /* mounted() {
+    var c = document.getElementById("myCanvas");
+    this.canvas = c.getContext("2d");
+    const img = document.getElementById("imgMapa");
+    this.canvas.drawImage(img, 0, 0);
+    this.canvas.beginPath();
+    this.canvas.arc(50, 50, 10, 0, 2 * Math.PI);
+    this.canvas.fillStyle = "red";
+    this.canvas.fill();
+  }, */
 };
 </script>
 

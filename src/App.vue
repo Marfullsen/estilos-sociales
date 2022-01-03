@@ -36,7 +36,6 @@ body {
   background: white;
   border: solid 5px skyblue;
   border-radius: 10px;
-  margin: 5em;
   margin-top: 0;
 }
 
@@ -75,5 +74,35 @@ body {
 
 #nav a.router-link-exact-active {
   color: white;
+}
+
+@media (min-width: 624px) {
+  .whiteFrame {
+    margin: 1em;
+  }
+}
+
+@media (min-width: 724px) {
+  .whiteFrame {
+    margin: 2em;
+  }
+}
+
+@media (min-width: 824px) {
+  .whiteFrame {
+    margin: 3em;
+  }
+}
+
+@media (min-width: 924px) {
+  .whiteFrame {
+    margin: 4em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .whiteFrame {
+    margin: 5em;
+  }
 }
 </style>
