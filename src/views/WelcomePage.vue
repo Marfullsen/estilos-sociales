@@ -36,6 +36,7 @@
             placeholder="Fulanito Perez"
             required
             autocomplete="off"
+            autofocus
           />
           <!-- <input type="text" placeholder="perez@fulatinos.cl" /> -->
           <button
@@ -46,10 +47,15 @@
             ¡Empieza ya!
             <i class="material-icons right">send</i>
           </button>
+          <div class="mt-1">
+            <div class="sharethis-inline-share-buttons"></div>
+          </div>
         </form>
       </article>
       <article v-else>
-        <h2>{{ question.title }}</h2>
+        <h2>
+          {{ question.title }}
+        </h2>
         <form>
           <p class="mt-50">
             <label>
@@ -68,19 +74,6 @@
               <span class="x-large">{{ question.answer_b }}</span>
             </label>
           </p>
-          <!-- <p>
-            <label>
-              <input name="answer" type="radio" disabled="disabled" />
-              <span class="x-large">No sé (premium)</span>
-            </label>
-          </p> -->
-          <!-- <button class="btn transparent font-black mt-50">Atrás</button> -->
-          <!-- <button
-            class="btn waves-effect waves-light light-blue darken-1 mt-50"
-            type="submit"
-          >
-            Siguiente
-          </button> -->
         </form>
       </article>
     </section>
@@ -133,6 +126,9 @@ export default {
         c: 0,
         d: 0,
       };
+
+      // Enfoque al input para permitir usar las flechas del teclado.
+      // setTimeout(() => document.getElementsByName("answer")[0].focus(), 100);
     },
     submitAnswer() {
       // Primer y segundo radio button.
@@ -171,30 +167,15 @@ export default {
       this.asertividad > 0
         ? this.emotividad > 0
           ? (this.playerStyle = "expresivo")
-          : (this.playerStyle = "propulsor")
+          : (this.playerStyle = "emprendedor")
         : this.emotividad > 0
-        ? (this.playerStyle = "integrador")
+        ? (this.playerStyle = "afable")
         : (this.playerStyle = "analítico");
-      //const canvas = document.getElementById("mapa");
-      //const ctx = this.$refs.mapa.getContext("2d");
-      /* alert("a" + this.playerAnswers.a);
-      alert("b" + this.playerAnswers.b);
-      alert("asert" + asertividad);
-      alert("c" + this.playerAnswers.c);
-      alert("d" + this.playerAnswers.d);
-      alert("emotiv" + emotividad); */
     },
   },
-  /* mounted() {
-    var c = document.getElementById("myCanvas");
-    this.canvas = c.getContext("2d");
-    const img = document.getElementById("imgMapa");
-    this.canvas.drawImage(img, 0, 0);
-    this.canvas.beginPath();
-    this.canvas.arc(50, 50, 10, 0, 2 * Math.PI);
-    this.canvas.fillStyle = "red";
-    this.canvas.fill();
-  }, */
+  mounted() {
+    document.getElementById("name").focus();
+  },
 };
 </script>
 
