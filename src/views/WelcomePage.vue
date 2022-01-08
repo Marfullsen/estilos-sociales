@@ -12,15 +12,38 @@
         </section>
         <section v-else>
           <h1 class="mb-0">¡Eres {{ playerStyle }}!</h1>
+          <h5>{{ estilos[playerStyle].brief }}</h5>
           <mapa-cartesiano
             :assertividad="-asertividad"
             :emotividad="-emotividad"
           />
-          <p class="message mt-1 fsize-large">
-            Nivel de asertividad: {{ -playerAnswers.a + playerAnswers.b }}
+          <p class="badge inline m-23px message mt-1 large-font">
+            Asertividad: {{ -playerAnswers.a + playerAnswers.b }}
           </p>
-          <p class="message mt-1 fsize-large">
-            Nivel de emotividad: {{ -playerAnswers.c + playerAnswers.d }}
+          <p class="badge inline message mt-1 large-font">
+            Emotividad: {{ -playerAnswers.c + playerAnswers.d }}
+          </p>
+          <p class="message negrita xx-large-font">
+            {{ estilos[playerStyle].the_most }}
+          </p>
+          <p class="message large-font">
+            {{ estilos[playerStyle].desc }}
+          </p>
+          <p class="message negrita xx-large-font bold">
+            {{ estilos[playerStyle].tends_to }}
+          </p>
+          <p class="message large-font">
+            {{ estilos[playerStyle].under_pressure }}
+          </p>
+          <p class="message negrita xx-large-font bold">
+            Cosas que puedes mejorar
+          </p>
+          <p
+            v-for="a_mejorar in estilos[playerStyle].should_work_on"
+            :key="a_mejorar"
+            class="flex message large-font"
+          >
+            ⫸ {{ a_mejorar }}
           </p>
           <p class="message mt-1 fsize-large">¡Volver a intentar!</p>
         </section>
@@ -82,13 +105,13 @@
 
 <script>
 import preguntas from "@/assets/preguntas.json";
+import estilos from "@/assets/estilos.json";
 import MapaCartesiano from "../components/MapaCartesiano.vue";
 
 export default {
   name: "WelcomePage",
   setup() {
     const amountQuestions = Object.keys(preguntas).length;
-
     return {
       amountQuestions,
     };
@@ -115,6 +138,7 @@ export default {
       playerStyle: "todo",
       asertividad: 0,
       emotividad: 0,
+      estilos: estilos,
     };
   },
   methods: {
@@ -202,8 +226,32 @@ label {
   color: black;
 }
 
+.inline {
+  display: inline;
+}
+
+.badge {
+  border-radius: 25px;
+  padding: 7px;
+  color: white;
+  background: deepskyblue;
+  padding-inline: 20px;
+}
+
+.m-23px {
+  margin-left: 23px;
+}
+
+.large-font {
+  font-size: large;
+}
+
 .x-large {
   font-size: x-large !important;
+}
+
+.xx-large-font {
+  font-size: xx-large;
 }
 
 .fontRed {
@@ -248,6 +296,10 @@ label {
 
 .align-center {
   align-content: center;
+}
+
+.negrita {
+  font-weight: bold;
 }
 
 .questions-form {

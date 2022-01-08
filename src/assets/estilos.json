@@ -1,0 +1,72 @@
+{
+  "analítico": {
+    "brief": "Los analíticos, que son típicamente calmos y poco espontáneos, evitan la participación y el compromiso emocional",
+    "the_most": "¡Eres el más perfeccionista de los estilos!",
+    "desc" : "Te interesa hacer lo correcto. Fijas altos estándares, no te sientes molesto de tener que hacer el trabajo de detalle necesario para cumplirlos… y, si es posible, superarlos. Le das atención minuciosamente a todos los aspectos de un proyecto, incluso a esos detalles que a otros podrían resultar insignificantes. Tiendes a ser crítico, orientado a los datos, excelente productor de información.",
+    "tends_to": "¡Tiendes a eludir la tensión!",
+    "under_pressure": "Evitas el contacto, evitas toda situación que implique lidiar con las emociones. Te aíslas, hablas menos de lo habitual; si hablas, tu comunicación es racional, poco empática, lógica… a veces tan poco contemplativa de los aspectos humanos que puedes herir. Tu tono de voz, tus gestos y tu postura revelan “nada”. Se te percibe como ausente de cualquier proceso interpersonal. Si alguno de los estilos de respuesta emotiva alta (afables o expresivos) intenta indagar sobre tus sentimientos, la reacción será la opuesta a la esperada: el analítico se refugiará aun más dentro de sí mismo y evitará aun más el contacto.",
+    "should_work_on": [
+      "El excesivo perfeccionismo, que suele ser la contracara de la excelencia - El exceso de detalle, a veces poco necesario",
+      "La indecisión, a la que puede conducir el exceso de prudencia",
+      "La burocratización, como exceso de la sistematicidad",
+      "La impersonalidad",
+      "incrementar la versatilidad",
+      "Preguntándose por el “valor agregado” y el “valor percibido”",
+      "Fijando metas temporales",
+      "Considerando el tiempo como parte del resultado a lograr",
+      "Agradecer más a menudo"
+    ]
+  },
+  "afable": {
+    "brief": "Los afables, que son típicamente cooperativos, consienten",
+    "the_most": "¡Eres el más conciliador y sociable de los estilos!",
+    "desc" : "Tienes una especial preocupación por la armonía. Siempre estás abierto a otros, eres sumamente generoso con su tiempo. Eres un “héroe de perfil bajo” en lo referente a la consolidación de equipos. Prestas cuidada atención a los sentimientos y estados anímicos de los demás, incluso a aquéllos que a otros podrían pasar desapercibidos. Tiendes a ser excelente anfitrión, orientado a la gente y con una enorme capacidad de escucha.",
+    "tends_to": "¡Tiendes a conceder! (a fin de no deteriorar la armonía)",
+    "under_pressure": "Puede que, incluso bajo una fuerte presión, te muestres de acuerdo con los demás; pero algo —los gestos, la mirada, el tono de la voz— revelará una inconsistencia entre las palabras y los otros lenguajes. El afable en situación de estrés parece flexible, aunque bajo su aparente flexibilidad subyace una creencia sumamente rígida: la creencia de que el conflicto destruye, y de que más vale ceder que enfrentarlo. Cuando acepta, su aceptación no responde a un compromiso genuino. Y ese aceptar no genuino puede, a la larga, dar lugar a conductas vindicativas.",
+    "should_work_on": [
+      "La tendencia a evitar el conflicto y guardarse el malestar",
+      "La falta de atención a la tarea por excesiva concentración en la gente",
+      "La tolerancia infinita",
+      "La dependencia para incrementar la versatilidad",
+      "Prepararse antes de una conversación conflictiva. Tener en claro los propios puntos de vista",
+      "“Ensayar” una manera propia de ser más asertivo",
+      "Evitar en lo posible el uso del potencial (“querría”, “me gustaría”)",
+      "Fijarse metas de resultados, tiempos y estándares"
+    ]
+  },
+  "expresivo": {
+    "brief": "Los expresivos, que son usualmente estimulantes, atacan o se “desbordan”",
+    "the_most": "¡Eres el más exuberante de los estilos!",
+    "desc" : "Tu vigor y tu entusiasmo “inyectan” energía a los equipos. Tu informalidad y tu libertad a menudo invitan a los demás a “desestructurarse”. Eres proactivo, impulsivo, se vincula rápida y fácilmente. Eres un “generador natural de sueños”, de nuevas realidades por crear con otros. Tiendes a ser excelente animador, orientado a aprovechar las ocasiones para hacer del trabajo un ámbito de disfrute.",
+    "tends_to": "¡Tiendes a desbordarse! (“contaminando” con tu malestar a los demás)",
+    "under_pressure": "El desborde puede pasar pronto (el expresivo suele ser inestable emocionalmente), pero para entonces los otros se sintieron atacados por su conducta poco respetuosa y puede costar recuperar el vínculo. La respuesta emotiva se vuelve extrema, así como también la asertividad. Por eso el expresivo bajo presión pelea, y no escucha otra cosa que a sí mismo. Se torna “auto-referenciado”,  y cuando el emprendedor o el analítico intentan hacerlo entrar en razón, suele sentirse agraviado asumiendo que los demás no toman en serio las condiciones de presión a las cuales está sometido.",
+    "should_work_on": [
+      "La impaciencia",
+      "La variabilidad de los estados anímicos y su efecto en la tarea",
+      "La subestimación del tiempo que llevan las diferentes tareas",
+      "La dispersión, la imaginación excesiva e impráctica",
+      "para incrementar la versatilidad",
+      "Elaborarse un plan de tareas a cumplir, fechas y tiempo estimado; reservarse tiempo extra",
+      "Monitorear diariamente el cumplimiento del plan",
+      "Involucrar en los planes a personas más prácticas y realistas",
+      "Fijarse metas y prioridades de resultados, tiempos y estándares"
+    ]
+  },
+  "emprendedor": {
+    "brief": "Los emprendedores, que por lo general son directivos, se vuelven autoritarios",
+    "the_most": "¡Eres el más pragmático de los estilos!",
+    "desc" : "Tienes una especial preocupación por el resultado. Tu realismo y capacidad de centrar el foco imprimen un claro sentido de dirección a la tarea. Eres sumamente orientado a la acción, eres un luchador que no se deja vencer por la adversidad. Eres proactivo, específico, seguro. Tiendes a ser excelente administrador del tiempo, especialmente apto en la fijación de prioridades.",
+    "tends_to": "¡Tiendes a controlar en exceso! (prescindiendo del criterio y las decisiones de los demás)",
+    "under_pressure": "Tus objetivos deben ser cumplidos, con tus parámetros, en tus tiempos y a tu manera. te cierras, no admites contradicciones, todo parece transformarse en un recurso para los propósitos que ya tienes delineados. La reflexión del analítico te resulta una pérdida de tiempo, la empatía del integrador te resulta una blandura poco compatible con la urgencia, y la espontaneidad del expresivo te resulta inconducente y fuera de contexto. Quizás el emprendedor bajo presión sea, de todos los estilos, el que más tiende a la “mismidad”; con su conducta parecería decir que “para un emprendedor no hay nada mejor que otro emprendedor”.",
+    "should_work_on": [
+      "La extrema independencia (que puede atentar contra el equipo)",
+      "La impersonalidad",
+      "La agresividad, el autoritarismo",
+      "La visión cortoplacista sin horizonte",
+      "para incrementar la versatilidad",
+      "Poner cuidado en el escuchar",
+      "Pedir opinión",
+      "Involucrar en los planes a personas de criterio diferente; evitar el dogmatismo"
+    ]
+  }
+}
