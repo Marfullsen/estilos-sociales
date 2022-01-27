@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://marfullsen.github.io/estilos-sociales/" rel="noopener">
- <img src="./docs/img/welcome_site.png" alt="Screenshot del test"></a>
+ <img src="./docs/img/social_style.png" alt="app-icon"></a>
 </p>
 
 <div align="center">
@@ -32,6 +32,11 @@
 
 ## 🧐 ¿Qué es el test de estilos sociales? <a name = "about"></a>
 
+<p align="center">
+  <a href="https://marfullsen.github.io/estilos-sociales/" rel="noopener">
+ <img src="./docs/img/welcome_site.png" alt="Screenshot del test"></a>
+</p>
+
 El test de estilo social de relación interpersonal, según el modelo de Bolton, es una prueba de alternativas que permite obtener los niveles de asertividad y emotividad de una persona, con ambos valores se puede determinar el estilo social al que pertenece.
 
 ## Por hacer  <a name = "todo"></a>
@@ -47,6 +52,11 @@ Primeros pasos:
 Para iniciar la prueba sólo escribe tu nombre y dale click al botón "¡Empezar!"
 
 Luego de responder las 18 preguntas obtendrás un mapa con tu estilo social marcado con un punto rojo.
+
+<p align="center">
+  <a href="https://marfullsen.github.io/estilos-sociales/" rel="noopener">
+ <img src="./docs/img/cartesianSocialStyle.png" alt="Mapa_Cartesiano_Wilson_Learning"></a>
+</p>
 
 Además se incluye información sobre el estilo obtenido, niveles de asertividad y emotividad.
 
@@ -87,8 +97,7 @@ npm run test:unit
 npm run serve
 ```
 
-- Abrir el navegador en la url especificada en consola (posiblemente [127.0.0.1:8080](localhost:8080))
-
+- Abrir el navegador en la url especificada en consola, posiblemente [127.0.0.1:8080](http://localhost:8080/)
 
 ## 🚀 Fase de producción <a name = "deployment"></a>
 
@@ -96,10 +105,14 @@ Cuando se pase a la fase de producción, se recomienda **crear un archivo llamad
 
 ## ⛏️ Tecnologías usadas <a name = "built_using"></a>
 
-- [Vue.js](https://vuejs.org/) - Framework de JavaScript para FrontEnd
-- ~~[MongoDB](https://www.mongodb.com/) - Base de datos no relacional~~
-- ~~[Express](https://expressjs.com/) - Framework para el servidor/backend~~
-- ~~[Node.js](https://nodejs.org/en/) - Entorno del sevidor/backend~~
+- [Vue.js](https://vuejs.org/) - Framework de JavaScript para FrontEnd.
+
+## Mockups
+
+<p align="center">
+  <a href="https://marfullsen.github.io/estilos-sociales/" rel="noopener">
+ <img src="./docs/img/mockup-estilos-sociales.png" alt="Mockup_1"></a>
+</p>
 
 ## ✍️ Autores <a name = "authors"></a>
 
@@ -110,3 +123,4 @@ Cuando se pase a la fase de producción, se recomienda **crear un archivo llamad
 - [Materialize CSS](https://materializecss.com/)
 - favicon de un [portapapeles](https://www.stockio.com/free-icon/stationery-clipboard)
 - Share Buttons por [sharethis.com](https://sharethis.com/)
+- [La Versatilidad y los 4 Estilos Sociales por Wilson Learning](https://www.businessupgroup.com/post/la-versatilidad-y-los-4-estilos-sociales)
