@@ -120,6 +120,8 @@ Cuando se pase a la fase de producción, se recomienda **crear un archivo llamad
 
 ## 🎉 Referencias <a name = "acknowledgement"></a>
 
+- [Test Estilos Sociales.pdf](./docs/pdf/Test%20Estilos%20Sociales.pdf)
+- [Estilos de Relación Interpersonal.pdf](./docs/pdf/Estilos%20de%20Relacion%20Interpersonal.pdf)
 - [Materialize CSS](https://materializecss.com/)
 - favicon de un [portapapeles](https://www.stockio.com/free-icon/stationery-clipboard)
 - Share Buttons por [sharethis.com](https://sharethis.com/)
