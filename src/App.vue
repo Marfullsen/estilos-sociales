@@ -4,15 +4,15 @@
       <router-link to="/">
         <i class="medio material-icons">home</i>
       </router-link>
+      <router-link to="/settings">
+        <i class="medio material-icons">equalizer</i>
+      </router-link>
       <router-link to="/about">
         <i class="medio material-icons">help_outline</i>
       </router-link>
-      <router-link to="/settings">
-        <i class="medio material-icons">settings</i>
-      </router-link>
     </article>
   </div>
-  <router-view class="whiteFrame"/>
+  <router-view class="whiteFrame" />
 </template>
 
 <style>
