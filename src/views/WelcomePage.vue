@@ -119,6 +119,8 @@ export default {
   components: { MapaCartesiano },
   data() {
     return {
+      token: this.$token,
+      puntajes: {},
       canvas: null,
       welcomeScreen: true,
       resultsScreen: false,
@@ -188,17 +190,47 @@ export default {
       this.resultsScreen = true;
       this.asertividad = this.playerAnswers.b - this.playerAnswers.a;
       this.emotividad = this.playerAnswers.d - this.playerAnswers.c;
-      this.asertividad > 0
-        ? this.emotividad > 0
-          ? (this.playerStyle = "expresivo")
-          : (this.playerStyle = "emprendedor")
-        : this.emotividad > 0
-        ? (this.playerStyle = "afable")
-        : (this.playerStyle = "analítico");
+      this.playerStyle = this.determinarEstilo(
+        this.asertividad,
+        this.playerStyle
+      );
+    },
+    determinarEstilo(asertividad, emotividad) {
+      let playerStyle = "";
+      asertividad > 0
+        ? emotividad > 0
+          ? (playerStyle = "expresivo")
+          : (playerStyle = "emprendedor")
+        : emotividad > 0
+        ? (playerStyle = "afable")
+        : (playerStyle = "analítico");
+      return playerStyle;
+    },
+    getToken() {
+      fetch(
+        "https://proto-api2.herokuapp.com/api-token-auth/"
+        //"http://127.0.0.1:8000/api-token-auth/"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          this.token = data.key;
+        });
+    },
+    getScores() {
+      fetch(
+        "https://proto-api2.herokuapp.com/api/paciente/puntajes/"
+        //"http://127.0.0.1:8000/api-token-auth/"
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          this.puntajes = data;
+        });
     },
   },
   mounted() {
     document.getElementById("name").focus();
+    this.getToken();
+    this.getScores();
   },
 };
 </script>

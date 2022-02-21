@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, ref } from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
@@ -6,4 +6,6 @@ import router from "./router";
 import "materialize-css/dist/css/materialize.css";
 import "materialize-css/dist/js/materialize.js";
 
-createApp(App).use(router).mount("#app");
+const app = createApp(App);
+app.config.globalProperties.$token = ref("-");
+app.use(router).mount("#app");
