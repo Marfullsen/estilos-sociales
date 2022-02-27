@@ -53,6 +53,7 @@
         <form class="questions-form" @submit.prevent="startTest">
           <h4 class="mb-0" for="name">Nombre:</h4>
           <input
+            v-model="nombre_jugador"
             id="name"
             name="name"
             type="text"
@@ -72,6 +73,17 @@
           </button>
           <div class="mt-1">
             <div class="sharethis-inline-share-buttons"></div>
+          </div>
+          <div>
+            <small
+              >* Al ingresar tu nombre aceptas la
+              <span
+                class="underlined"
+                title="Recopilaremos nombre y puntaje para la estadística."
+              >
+                politica de privacidad.
+              </span>
+            </small>
           </div>
         </form>
       </article>
@@ -119,6 +131,7 @@ export default {
   components: { MapaCartesiano },
   data() {
     return {
+      nombre_jugador: "",
       token: this.$token,
       puntajes: {},
       canvas: null,
@@ -192,8 +205,9 @@ export default {
       this.emotividad = this.playerAnswers.d - this.playerAnswers.c;
       this.playerStyle = this.determinarEstilo(
         this.asertividad,
-        this.playerStyle
+        this.emotividad
       );
+      this.sendScore();
     },
     determinarEstilo(asertividad, emotividad) {
       let playerStyle = "";
@@ -216,21 +230,31 @@ export default {
           this.token = data.key;
         });
     },
-    getScores() {
-      fetch(
-        "https://proto-api2.herokuapp.com/api/paciente/puntajes/"
-        //"http://127.0.0.1:8000/api-token-auth/"
-      )
+    sendScore() {
+      const url = "https://proto-api2.herokuapp.com/api/paciente/nuevo/";
+      const options = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json;charset=UTF-8",
+        },
+        body: JSON.stringify({
+          nombre: this.nombre_jugador,
+          asertividad: this.asertividad,
+          emotividad: this.emotividad,
+          token: this.token.slice(0, 25),
+        }),
+      };
+      fetch(url, options)
         .then((response) => response.json())
         .then((data) => {
-          this.puntajes = data;
+          console.log(data);
         });
     },
   },
   mounted() {
     document.getElementById("name").focus();
     this.getToken();
-    this.getScores();
   },
 };
 </script>
@@ -358,5 +382,9 @@ input {
 
 .block {
   display: block;
+}
+
+.underlined {
+  text-decoration-line: underline;
 }
 </style>

@@ -4,7 +4,7 @@
       <router-link to="/">
         <i class="medio material-icons">home</i>
       </router-link>
-      <router-link to="/settings">
+      <router-link to="/score">
         <i class="medio material-icons">equalizer</i>
       </router-link>
       <router-link to="/about">

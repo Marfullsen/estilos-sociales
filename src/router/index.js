@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import WelcomePage from "../views/WelcomePage.vue";
 import AboutPage from "../views/AboutPage.vue";
-import SettingsPage from "../views/SettingsPage.vue";
+import ScorePage from "../views/ScorePage.vue";
 
 const routes = [
   {
@@ -15,9 +15,9 @@ const routes = [
     component: AboutPage,
   },
   {
-    path: "/settings",
-    name: "SettingsPage",
-    component: SettingsPage,
+    path: "/score",
+    name: "ScorePage",
+    component: ScorePage,
   },
 ];
 
