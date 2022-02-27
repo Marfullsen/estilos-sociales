@@ -117,7 +117,7 @@ table {
 
 th,
 td {
-  padding: 8px;
+  padding: 14px;
   text-align: center !important;
   border-bottom: 1px solid #ddd;
   font-size: x-large !important;

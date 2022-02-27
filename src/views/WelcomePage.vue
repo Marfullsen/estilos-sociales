@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="container">
+    <section>
       <article class="welcomePage" v-if="welcomeScreen">
         <section v-if="!resultsScreen">
           <h1 class="mb-0">¡Conoce tu Estilo Social!</h1>
