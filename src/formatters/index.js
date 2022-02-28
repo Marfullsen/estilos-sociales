@@ -8,10 +8,14 @@ export default function humanizar_lapso(
   date_formats = date_formats || {
     past: [
       { ceiling: 60, text: "hace menos de un minuto" }, //{ ceiling: 60, text: "hace $seconds segundos" },
-      { ceiling: 3600, text: "hace $minutes minutos" },
-      { ceiling: 86400, text: "hace $hours horas" },
-      { ceiling: 2629744, text: "hace $days días" },
-      { ceiling: 31556926, text: "hace $months meses" },
+      { ceiling: 3600, text: "hace un minuto" },
+      { ceiling: 7200, text: "hace $minutes minutos" },
+      { ceiling: 86400, text: "hace una hora" },
+      { ceiling: 172800, text: "hace $hours horas" },
+      { ceiling: 2629744, text: "hace un día" },
+      { ceiling: 5259488, text: "hace $days días" },
+      { ceiling: 31556926, text: "hace un mes" },
+      { ceiling: 63113852, text: "hace $months meses" },
       { ceiling: null, text: "hace $years años" },
     ],
     future: [

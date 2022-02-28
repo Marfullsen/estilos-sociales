@@ -1,24 +1,56 @@
 <template>
-  <table>
-    <tr>
-      <th>Nombre</th>
-      <th>Estilo</th>
-      <th>Jugado</th>
-    </tr>
-    <tr v-for="persona in puntajes" :key="persona">
-      <td>{{ persona.nombre }}</td>
-      <td>
-        <span
-          class="insignia"
-          :class="calcularEstilo(persona.asertividad, persona.emotividad)"
-        >
-          {{ calcularEstilo(persona.asertividad, persona.emotividad) }}
-        </span>
-      </td>
-      <td>{{ lapso(persona.fecha_tested) }}</td>
-    </tr>
-  </table>
-  <!--  -->
+  <section>
+    <article class="desktop">
+      <table class="w-500">
+        <tr>
+          <th>
+            <i class="medio material-icons">person</i>
+          </th>
+          <th>
+            <i class="medio material-icons">palette</i>
+          </th>
+          <th>
+            <i class="medio material-icons">access_time</i>
+          </th>
+        </tr>
+        <tr v-for="persona in puntajes" :key="persona">
+          <td>{{ persona.nombre }}</td>
+          <td>
+            <span
+              class="insignia"
+              :class="calcularEstilo(persona.asertividad, persona.emotividad)"
+            >
+              {{ calcularEstilo(persona.asertividad, persona.emotividad) }}
+            </span>
+          </td>
+          <td>{{ lapso(persona.fecha_tested) }}</td>
+        </tr>
+      </table>
+    </article>
+    <table class="mobile">
+      <tr>
+        <th>
+          <i class="medio material-icons">person</i>
+          <i class="medio material-icons">palette</i>
+        </th>
+        <th>
+          <i class="medio material-icons">access_time</i>
+        </th>
+      </tr>
+      <tr v-for="persona in puntajes" :key="persona">
+        <td style="display: flex; flex-direction: column-reverse">
+          <span
+            class="insignia insignia-mobile"
+            :class="calcularEstilo(persona.asertividad, persona.emotividad)"
+          >
+            {{ calcularEstilo(persona.asertividad, persona.emotividad) }}
+          </span>
+          <span>{{ persona.nombre }}</span>
+        </td>
+        <td>{{ lapso(persona.fecha_tested) }}</td>
+      </tr>
+    </table>
+  </section>
 </template>
 
 <script>
@@ -105,9 +137,12 @@ export default {
 
 .insignia {
   border-radius: 25px;
-  padding: 7px;
   color: white;
   padding: 10px;
+}
+
+.insignia-mobile {
+  padding: 0px;
 }
 
 table {
@@ -125,5 +160,24 @@ td {
 
 tr:hover {
   background-color: #c4e4ff;
-} /*  */
+}
+
+.desktop {
+  display: none;
+}
+
+.w-500 {
+  width: 500px;
+}
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: initial;
+    display: flex;
+    justify-content: center;
+  }
+  .mobile {
+    display: none;
+  }
+}
 </style>

@@ -76,7 +76,7 @@
           </div>
           <div>
             <small
-              >* Al ingresar tu nombre aceptas la
+              >* Al iniciar el test aceptas la
               <span
                 class="underlined"
                 title="Recopilaremos nombre y puntaje para la estadística."
