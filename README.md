@@ -19,10 +19,14 @@
   Test interactivo para obtener información sobre estilos sociales
 </p>
 
+## ¡Nuevas características!
+
+- Tabla con los últimos 5 resultados.
+- Arreglados ciertos detalles estéticos.
+- Política de privacidad.
 ## 📝 Contenidos
 
 - [¿Qué es el test de estilos sociales?](#about)
-- [Por hacer](#todo)
 - [¡Empecemos!](#getting_started)
 - [Fase de producción](#deployment)
 - [ejecución](#usage)
@@ -38,12 +42,6 @@
 </p>
 
 El test de estilo social de relación interpersonal, según el modelo de Bolton, es una prueba de alternativas que permite obtener los niveles de asertividad y emotividad de una persona, con ambos valores se puede determinar el estilo social al que pertenece.
-
-## ¡Nuevas características!  <a name = "todo"></a>
-
-- Tabla con los últimos 5 resultados.
-- Arreglados ciertos detalles estéticos.
-- Política de privacidad.
 
 ## 🏁 ¡Empecemos! <a name = "getting_started"></a>
 
