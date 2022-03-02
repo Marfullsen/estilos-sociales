@@ -39,11 +39,11 @@
 
 El test de estilo social de relación interpersonal, según el modelo de Bolton, es una prueba de alternativas que permite obtener los niveles de asertividad y emotividad de una persona, con ambos valores se puede determinar el estilo social al que pertenece.
 
-## Por hacer  <a name = "todo"></a>
+## ¡Nuevas características!  <a name = "todo"></a>
 
-- Tabla de resultados competitivos
-- Detalles estéticos.
-- Estadísticas y métricas de uso.
+- Tabla con los últimos 5 resultados.
+- Arreglados ciertos detalles estéticos.
+- Política de privacidad.
 
 ## 🏁 ¡Empecemos! <a name = "getting_started"></a>
 
@@ -84,6 +84,16 @@ cd estilos-sociales
 npm install
 
 ```
+
+## Configuración adicional 
+### Puntuaciones
+
+El sistema de puntajes se implementó mediante un servidor externo, para visualizar datos reales se deberá configurar manualmente, en caso contrario el sistema mostrará una tabla fija con resultados ficticios.
+
+<p align="center">
+  <a href="https://marfullsen.github.io/estilos-sociales/score" rel="noopener">
+ <img src="./docs/img/puntajes.png" alt="Puntajes"></a>
+</p>
 
 ## 🔧 Correr las pruebas <a name = "tests"></a>
 
