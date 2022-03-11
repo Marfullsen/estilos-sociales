@@ -16,6 +16,7 @@ export default function humanizar_lapso(
       { ceiling: 2629744, text: "hace $days días" },
       { ceiling: 5259488, text: "hace un mes" },
       { ceiling: 31556926, text: "hace $months meses" },
+      { ceiling: 34186670, text: "hace un año" },
       { ceiling: null, text: "hace $years años" },
     ],
     future: [
