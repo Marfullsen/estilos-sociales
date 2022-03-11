@@ -45,6 +45,9 @@
           >
             ⫸ {{ a_mejorar }}
           </p>
+          <p class="message negrita xx-large-font bold">
+            Tiempo usado: {{ tiempo_tomado }}
+          </p>
           <p class="message mt-1 fsize-large">¡Volver a intentar!</p>
         </section>
         <!-- <p class="message">
@@ -132,6 +135,8 @@ export default {
   data() {
     return {
       nombre_jugador: "",
+      fecha_inicio: "",
+      tiempo_tomado: "",
       token: this.$token,
       puntajes: {},
       canvas: null,
@@ -158,6 +163,7 @@ export default {
   },
   methods: {
     startTest() {
+      this.fecha_inicio = new Date();
       this.welcomeScreen = false;
       this.playerAnswers = {
         a: 0,
@@ -197,7 +203,50 @@ export default {
       this.question.answer_a = preguntas[this.id_question]["a"];
       this.question.answer_b = preguntas[this.id_question]["b"];
     },
+    calcularDuracionTest(fecha_inicio, fecha_termino) {
+      let diff = fecha_inicio.getTime() - fecha_termino.getTime();
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= days * (1000 * 60 * 60 * 24);
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      diff -= hours * (1000 * 60 * 60);
+
+      const mins = Math.floor(diff / (1000 * 60));
+      diff -= mins * (1000 * 60);
+
+      const seconds = Math.floor(diff / 1000);
+      diff -= seconds * 1000;
+
+      const singularOrPlural = (amount, noun) => {
+        if (amount < 2) return `${amount} ${noun}`;
+        return `${amount} ${noun}s`;
+      };
+
+      const tiempos = [];
+      if (days) tiempos.push(singularOrPlural(days, "día"));
+      if (hours) tiempos.push(singularOrPlural(hours, "hora"));
+      if (mins) tiempos.push(singularOrPlural(mins, "minuto"));
+      if (seconds) tiempos.push(singularOrPlural(seconds, "segundo"));
+
+      let res = tiempos.join(", ") + ".";
+
+      String.prototype.replaceAt = function (i, j, str) {
+        return this.substr(0, i) + str + this.substr(j, this.length);
+      };
+
+      const lastIndex = res.lastIndexOf(",");
+      res =
+        lastIndex != -1 ? res.replaceAt(lastIndex, lastIndex + 1, " y") : res;
+
+      return res;
+    },
     results() {
+      let fecha_termino = new Date();
+      this.tiempo_tomado = this.calcularDuracionTest(
+        fecha_termino,
+        this.fecha_inicio
+      );
       this.welcomeScreen = true;
       this.id_question = "1";
       this.resultsScreen = true;
